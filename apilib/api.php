@@ -77,7 +77,7 @@ class Api
                 'action' => $this->action,
                 'data' => [
                     'time' => time(),
-                    'data' => json_encode($output['data'])
+                    'data' => $output['data']
                 ]
             ]);
         }
@@ -100,7 +100,7 @@ class Api
     {
         return json_encode([
             'success' => 1,
-            'data' => json_encode($output)
+            'data' => $output
         ]);
     }
 
@@ -108,7 +108,7 @@ class Api
     {
         return json_encode([
             'success' => 1,
-            'data' => json_encode($output)
+            'data' => $output
         ]);
     }
     
@@ -119,7 +119,7 @@ class Api
         }
         return json_encode([
             'success' => 1,
-            'data' => json_encode($output)
+            'data' => $output
         ]);
     }
 

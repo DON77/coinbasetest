@@ -49,9 +49,9 @@ class Rout
         }
     }
 }
+header('Content-Type: application/json');
 
-echo '<pre>';
 $routing = new Rout();
 $api = new Api($routing);
-$data = $api->getData();
-print_r(json_decode($data, true));
+echo $api->getData();
+die;
